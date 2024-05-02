@@ -148,44 +148,47 @@ The code was written in using OOPs concepts for extracting the medical data from
 ---
 ### Regular expression
 
-using regular expression module we can match the patterns and extract the data we want from the files. For this project, 
-analyst the medical files and as fact all the medical documents will follow same pattern, we wrote patterns that match only the required data.
-Before writing the python code, It is advisable to practise and match the patterns in regex 101 website.
+#### **Pattern Matching with Regular Expression**
+**Approach:** Utilized the Regular Expression (regex) module to match patterns and extract required data from medical files.
+**Pattern Consistency:** Due to the standardized format of medical documents, consistent patterns were identified for data extraction.
+**Preparation:** Prior to writing Python code, practiced and validated patterns using the regex 101 website.
+Efficiency Enhancement: Pattern matching ensures extraction of only the necessary data, optimizing the processing of medical documents.
 
 [regex101](https://regex101.com/)
 
 ---
-### Test driven Development
 
-In this project test driven development methodology was used to develop the code. For testing pytest module was used. 
-For all the methods and final result the test cases was designed and checked simultaneously while developing the code.
+### Test-Driven Development with Pytest
+**Methodology:** Adopted test-driven development (TDD) approach throughout the code development process.
+**Testing Framework:** Utilized the pytest module for writing and executing test cases.
+**Simultaneous Testing:** Test cases for all methods and final results were designed and checked simultaneously during code development.
+**Benefits:** Ensured code functionality and integrity at each stage of development, promoting robustness and reliability in the final implementation.
 
 [Test cases](https://github.com/sushmitafordata/Healthcare-Project-Python/tree/main/Backend/Test)
 
 ---
-### FastApi
 
-Used FastAPI for hosting the server of the project. FastApi, as name suggest is help us to develop fast and some other advantages are,
-
-- In build Data validation
-- In build Documentation
-- Fast running and performance
+#### Utilization of FastAPI for Server Hosting
+**Framework Selection:** FastAPI was chosen for hosting the project server due to its speed and efficiency.
+Advantages:
+**In-built Data Validation:** FastAPI provides built-in data validation, ensuring the integrity of incoming requests.
+**In-built Documentation:** Automatic generation of API documentation by FastAPI streamlines the development and maintenance process.
+**Performance:** FastAPI is known for its fast runtime performance, contributing to improved server responsiveness and scalability.
 
 ---
-### Postman
 
-As it is a backend project, not developed frontend part. For checking how the server responds for http requests, used postman to trigger http requests and tested the outcome.
-
+### Testing with Postman
+**Backend Focus:** Since the project is backend-oriented, no frontend development was undertaken.
+**Testing Tool:** Postman was employed to trigger HTTP requests and assess server responses.
+**Purpose:** Postman facilitated thorough testing of the server's functionality and ensured proper handling of HTTP requests and responses.
+**Efficiency:** Utilizing Postman streamlined the testing process, allowing for comprehensive validation of the backend implementation.
 <img src="https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/blob/main/Backend/Notebooks/postman.png" width="600" class="center">
 
 ---
-## Result
-
-This backend functionality can be integrated into the Mr.X Analytics existing software and data can be extracted automatically. 
-The extracted data may have some errors, the person who is performing the work has to correct it and submit the response.
+### Result
+- The backend functionality developed can seamlessly integrate into Mr.X Analytics' existing software, enabling automatic data extraction from documents. - - However, manual verification and correction of extracted data are necessary before submission.
 
 ### Benefits
-
-- Mr.X Analytics can save at least of 30 secs for each document. It is small amount of time when looking for one document, but cumulatively it can save a tremendous amount of time which can help the company to complete more documents within the given time and make more profit
-- The company doesn't have to hire extra people in the season time.
-- As it is a combination of automation and manual the error will be very much low.
+- **Time Saving:** Mr.X Analytics stands to save a significant amount of time, approximately 30 seconds per document, ultimately leading to increased productivity and profitability.
+- **Seasonal Staffing:** Eliminates the need for hiring additional personnel during peak seasons, ensuring operational efficiency and cost savings.
+- **Error Reduction:** Combining automation with manual verification results in a substantial decrease in errors, enhancing data accuracy and reliability.
