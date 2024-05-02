@@ -136,14 +136,14 @@ Lialda - take 2 pill everyday for 1 month
 ### Notebook
 
 Jupyter Notebooks were utilized for incremental development of small functionalities, crucial for later integration into the class design.
-[Notebooks](https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/tree/main/Backend/Notebooks)
+[Notebooks](https://github.com/sushmitafordata/Healthcare-Project-Python/tree/main/Backend/Notebooks)
 
 ---
 ### OOPS design
 
 The code was written in using OOPs concepts for extracting the medical data from prescription and patient details documents.
 
-[Code](https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/tree/main/Backend/src)
+[Code](https://github.com/sushmitafordata/Healthcare-Project-Python/tree/main/Backend/src)
 
 ---
 ### Regular expression
@@ -160,7 +160,7 @@ Before writing the python code, It is advisable to practise and match the patter
 In this project test driven development methodology was used to develop the code. For testing pytest module was used. 
 For all the methods and final result the test cases was designed and checked simultaneously while developing the code.
 
-[Test cases](https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/tree/main/Backend/Test)
+[Test cases](https://github.com/sushmitafordata/Healthcare-Project-Python/tree/main/Backend/Test)
 
 ---
 ### FastApi
