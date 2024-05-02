@@ -1,45 +1,66 @@
 # OCR based Medical Data Extraction Project
 
-I made this project by following codebasics python course, the link for the course is below. If you are interested checkout the link.
-
-[Codebasics Python course](https://codebasics.io/courses/python-for-beginner-and-intermediate-learners)
-
 ## Problem statement
 
-There are a lot of procedures needs to followed by the health insurance companies as per the government regulation to issue the claims, for that the insurance company has to process the images of patient details and prescription sent by hospitals or induvial doctors and extract useful data from them. For these process, the most insurance companies outsource workforce from companies like “Mr. X data Analytics” to extract the information from images manually. 
+### Background:
 
-Mr. X data Analytics uses a software, which will show the scanned images of patient details or prescription, the person needs to type the information by seeing the image manually in the the right side column and select the type of information . As it is a manual process, error will be common and dealing with the huge set of images like in the pandemic time, will not be possible with the same amount of workforce. As well the Insurance companies has requested to send the data within 24hrs when it is send for extraction. All of these constraints forced, Mr. X data Analytics to consider for a software upgrade from their old software. 
+- Health insurance companies are required by government regulations to follow specific procedures for issuing claims.
+- This involves processing images of patient details and prescriptions sent by hospitals or individual doctors to extract essential data.
+  
+### Outsourcing Workforce:
 
-## Solution approach
+- Many insurance companies outsource this task to companies like "Mr. X Data Analytics" to manually extract information from images.
+-  Mr. X Data Analytics utilizes software where scanned images are displayed, and personnel manually type the information into the right-side column while selecting the type of data.
+  
+### Challenges and Solution:
+- Manual extraction often leads to errors, especially when dealing with a large volume of images, such as during the pandemic.
+- Additionally, insurance companies require data to be extracted within a 24-hour timeframe.
+- To address these challenges, Mr. X Data Analytics is considering a software upgrade to improve efficiency and accuracy in data extraction
 
-To solve all these problems, we are building a program which can do the extraction of data from images automatically. As always, machines can not replace humans. A person will recheck the extracted data and submit. So, that it will save a tremendous amount which was taken to type the data manually. 
 
-Here, we are using the Python programming language and pytesseract google library for extracting the data and Regex module to process the data and get distilled desired output.
+## Solution Approach
+
+### Automated Data Extraction:
+
+- Developing a program to automate the extraction of data from images aims to streamline the process and minimize manual intervention.
+-  While machines cannot entirely replace human involvement, this automated system significantly reduces the time and effort required for data extraction.
+  
+### Utilizing Python and pytesseract Library:
+
+- Leveraging the capabilities of Python programming language and the pytesseract library from Google, the program performs automatic data extraction from images. pytesseract enables Optical
+- Character Recognition (OCR), allowing the program to interpret text from images accurately.
+  
+### Data Processing with Regex:
+
+- The extracted data undergoes further processing using the Regex module to refine and distill the desired output.
+-  Regex facilitates pattern matching and manipulation of textual data, ensuring the accuracy and relevance of the extracted information.
+  
+### Human Verification:
+- Despite the automation, human verification remains crucial for ensuring data accuracy and integrity.
+- A designated person reviews the extracted data to confirm its correctness before submission, maintaining quality assurance standards.
 
 
-## Technologies used
-
+## Technologies Used
 - Python
-- oops
+- Object-Oriented Programming (OOP)
 - Pdf2image module
-- Opencv
+- OpenCV
 - pytesseract
-- Regular expression
+- Regular Expression (Regex)
 - pytest
 - Postman
-- FastApi
+- FastAPI
 
 ## Workflow
 
 <img src="https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/blob/main/Backend/Notebooks/workflow.jpg" class = "center">
 
 ### PDF to Image
+**Library Used:** pdf2image library employed for converting PDF files to images, facilitating further data extraction.
 
-For converting PDF to image, we have used pdf2image library.
-
-### Without preprocessing extracting data
-
-Tried extracting data from source files without any processing, as they are not in proper format to be extracted, the extracted data was not as expected.
+### Without Preprocessing Data Extraction
+**Approach:** Attempted data extraction from source files without any preprocessing.
+**Result:** Due to the unstructured nature of the source files, the extracted data did not meet expectations, indicating the need for preprocessing before extraction.
 
 <img src="https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/blob/main/Backend/Notebooks/dark_image.jpg" width="350" class="center">
 
@@ -63,21 +84,33 @@ Lialda 2.4 gram
 or 1 month
 ```
 ---
-### Image processing
 
-we decided to preprocess the image using opencv module, before extracting data from them. For that we have first used normal thresholding and checked, which resulted in below image
+### Image Preprocessing with OpenCV
+
+**Approach:** Decision made to preprocess images using the OpenCV module before data extraction.
+
+**Method:** Initially applied normal thresholding to the images.
+
+**Result:** The result of the normal thresholding process yielded the following image:
 
 <img src="https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/blob/main/Backend/Notebooks/filter_dark.jpg" width="350" class="center">
 
 
-So, if there is any shadow or some noise, the normal thresholding fade out the area. which will result in loss of data. 
 
-In the search of better approach of this problem, we have decided to use adaptive thresholding technique. In this technique, the image will be divided into sub image and the thresholding value will be different for all sub regions.
-And the end result of adaptive thresholding is much better compared to normal thresholding.
+### Improved Approach: Adaptive Thresholding
+
+**Problem Identification:** Normal thresholding caused fading out of areas containing shadows or noise, potentially resulting in data loss.
+
+**Solution Exploration:** In search of a better approach, adaptive thresholding technique was considered.
+
+**Methodology:** Adaptive thresholding involves dividing the image into sub-images, with different thresholding values applied to each sub-region.
+
+**Result Comparison:** The end result of adaptive thresholding was found to be significantly better compared to normal thresholding, offering improved data extraction accuracy and preserving details even in areas affected by shadows or noise.
 
 <img src="https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/blob/main/Backend/Notebooks/adaptive_filter_dark.jpg" width="350" class='center'>
 
-### After preprocessing the image data extraction
+
+### Image Data Extraction post preprocessing
 
 ```commandline
 Dr John Smith, M.D
@@ -102,8 +135,7 @@ Lialda - take 2 pill everyday for 1 month
 ---
 ### Notebook
 
-For all these above trials, used jupyter books and developed the small bits of the functionalities., which can be used later while designing the class.
-
+Jupyter Notebooks were utilized for incremental development of small functionalities, crucial for later integration into the class design.
 [Notebooks](https://github.com/Naveen-S6/Data_Extraction_Healthcare_Project/tree/main/Backend/Notebooks)
 
 ---
