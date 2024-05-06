@@ -1,4 +1,4 @@
-# OCR based Medical Data Extraction Project
+# OCR based Medical Data Project in Python
 
 ## Problem statement
 
